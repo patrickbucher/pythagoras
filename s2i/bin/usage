@@ -15,7 +15,7 @@ You can then run the resulting image via:
 
 Test:
 
-    curl -X POST localhost:9999/canary
+    curl localhost:9999/canary
     curl -X POST -F a=3 -F b=4 localhost:9999/pythagoras
 
 EOF
