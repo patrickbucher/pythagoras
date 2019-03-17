@@ -29,5 +29,6 @@ func pythagoras(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	c := math.Sqrt(a*a + b*b)
+	log.Printf("%v²+%v²=%v²", a, b, c)
 	w.Write([]byte(strconv.FormatFloat(c, 'f', -1, 32) + "\n"))
 }
