@@ -182,7 +182,6 @@ items:
     labels:
       app: pythagoras
   spec:
-    host: pythagoras.192.168.42.154.nip.io
     path: /pythagoras
     port:
       targetPort: 9999-tcp
