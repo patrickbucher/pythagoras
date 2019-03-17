@@ -45,13 +45,6 @@ items:
         name: 'pythagoras-base:latest'
     triggers:
       - type: ConfigChange
-      - type: ImageChange
-        imageChangeParams:
-          automatic: true
-          from:
-            kind: ImageStreamTag
-            name: 'pythagoras-base'
-
 
 - apiVersion: v1
   kind: BuildConfig
@@ -83,7 +76,7 @@ items:
           automatic: true
           from:
             kind: ImageStreamTag
-            name: 'pythagoras-s2i'
+            name: 'pythagoras-base:latest'
 
 - apiVersion: v1
   kind: BuildConfig
@@ -114,7 +107,7 @@ items:
           automatic: true
           from:
             kind: ImageStreamTag
-            name: 'pythagoras'
+            name: 'pythagoras-s2i:latest'
 
 - apiVersion: v1
   kind: DeploymentConfig
