@@ -2,6 +2,8 @@ FROM golang:alpine
 
 LABEL maintainer="Patrick Bucher <patrick.bucher@stud.hslu.ch>"
 
+RUN apk add openssh-client bash
+
 RUN addgroup --gid 1001 gophers && \
     adduser -D --uid 1001 -G gophers gopher
 
